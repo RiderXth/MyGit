@@ -44,10 +44,13 @@ public class Exercise6 {
 		} while (true);
 	 
 // ====================== Main Process =========================================================================
-	 tot_time = hh + (mm/60) + (ss/(60*60));
-	 System.out.println("Total time (Hr) = " + tot_time);
-	 avg_speed = distance/tot_time;
-	 System.out.println("Speed KM/Hr = %f2 " + avg_speed);
+	 tot_time  = (float) hh + 0f;
+	 tot_time += (float) (mm/60f);
+	 tot_time  += (float) (ss/(60f*60f));
+	 System.out.printf("Total time (Hr) = %.2f%n ", tot_time);
+	 avg_speed = (float) ((distance/1000f)/tot_time);
+	 System.out.println();
+	 System.out.printf("Speed KM/Hr = %.3f%n ", avg_speed);
 		
 	}
 }
